@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import {Button} from '../styled/Button'
+import dice from '/public/images/dices 1.png'
 
 const Home = ({isgamestarted,setisgamestarted}) => {
 
@@ -12,7 +13,7 @@ const Home = ({isgamestarted,setisgamestarted}) => {
     return (
         <Container>
             <div className='img'>
-                <img src="/public/images/dices 1.png" alt="" />
+                <img src={dice} alt="" />
             </div>
             <div className='content'>
                 <h1>DICE GAME</h1>
