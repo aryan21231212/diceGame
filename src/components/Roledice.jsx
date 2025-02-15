@@ -1,6 +1,21 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Button, OutlineButton } from '../styled/Button'
+import dice1 from '/public/images/dice/dice_1.png'
+import dice2 from '/public/images/dice/dice_2.png'
+import dice3 from '/public/images/dice/dice_3.png'
+import dice4 from '/public/images/dice/dice_4.png'
+import dice5 from '/public/images/dice/dice_5.png'
+import dice6 from '/public/images/dice/dice_6.png'
+
+const diceImages = {
+    1: dice1,
+    2: dice2,
+    3: dice3,
+    4: dice4,
+    5: dice5,
+    6: dice6
+  }
 
 
 const Roledice = ({curentdice,rand,setscore,settog,tog}) => {
@@ -20,7 +35,7 @@ const Roledice = ({curentdice,rand,setscore,settog,tog}) => {
   return (
     <div>
         <Images>
-            <img onClick={rand} src={`/public/images/dice/dice_${curentdice}.png`} alt="" />
+            <img onClick={rand} src={diceImages[curentdice]} alt="" />
             <p>Click on Dice to roll</p>
             <div className='outbut'>
                 <OutlineButton onClick={resetscore}>Reset Score</OutlineButton>
